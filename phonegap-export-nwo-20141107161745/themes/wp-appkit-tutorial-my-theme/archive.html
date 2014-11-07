@@ -1,0 +1,24 @@
+<h1><%= list_title %></h1>
+    
+<% if(posts.length){ %>
+
+    <ul class="media-list">
+        <% _.each( posts, function( post ){ %>
+            <div class="media">
+                <% if( post.thumbnail.src && post.thumbnail.src.length ){ %>
+                    <img class="media-object pull-left" src="<%= post.thumbnail.src %>" style="width: 87px; height: 58px;">
+                <% } %>	
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        <a href="<%= TemplateTags.getPostLink(post.id) %>" class="pull-left"><%= post.title %></a>
+                        &nbsp;<small class="small"><%= TemplateTags.formatDate(post.date,'d/m/Y') %></small>
+                    </h4>
+                    <p><%= post.excerpt %></p>
+                </div>
+            </div>
+        <% }); %>
+    </ul>
+		
+<% }else{ %>
+        <p>No post found!</p>
+<% } %>

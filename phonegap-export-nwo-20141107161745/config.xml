@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.lastmason.nwo"
+        versionCode = "1"
+        version     = "1.0" >
+
+	<name>NWO</name>
+
+	<description>Description</description>
+
+	<author href="www.lastmason.com" email="info@lastmason.com">LastMason</author>
+
+	<gap:platform name="android" />
+	
+	<preference name="disallowOverscroll" value="true" />
+	<preference name="webviewbounce" value="false" />
+	
+	<!-- Add Icon, Splash screen and any PhoneGap plugin declaration here -->
+
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+	<gap:plugin name="org.apache.cordova.network-information" />
+
+</widget>

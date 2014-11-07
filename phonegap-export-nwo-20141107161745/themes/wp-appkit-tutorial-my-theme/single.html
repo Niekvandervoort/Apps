@@ -1,0 +1,8 @@
+<h1><%= post.title %></h1>
+<%= TemplateTags.formatDate(post.date,'d/m/Y') %>
+<div id="single-content">
+    <% if(  post.thumbnail && post.thumbnail.src && post.thumbnail.src.length ){ %>
+        <img src="<%= post.thumbnail.src %>" />
+    <% } %>
+    <%= post.content %>
+</div>
